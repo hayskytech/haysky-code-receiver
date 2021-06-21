@@ -3,7 +3,7 @@
 Plugin Name: Haysky Code Receiver Plugin
 Plugin URI: https://www.haysky.com/
 Description: Directly add/update code into your website from Haysky Code Generator.
-Version: 1.0.0
+Version: 1.0.1
 Author: Sufyan
 Author URI: https://www.sufyan.in/
 License: GPLv2 or later
