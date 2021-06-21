@@ -18,6 +18,7 @@ add_action('admin_menu' , function(){
 function haysky_code_receiver_ezq(){ include 'haysky_code_receiver.php'; }
 
 include 'rest_api.php';
+
 add_action( "init", function(){
     if ( is_admin() ) {
         if( !class_exists( "Smashing_Updater" ) ){
@@ -26,8 +27,8 @@ add_action( "init", function(){
                 $src = file_get_contents( "https://raw.githubusercontent.com/rayman813/smashing-updater-plugin/master/updater.php" );
                 file_put_contents($updater_file, $src);
             }
+            include $updater_file;
         }
-        include_once( $updater_file );
         $updater = new Smashing_Updater( __FILE__ );
         $updater->set_username( "hayskytech" );
         $updater->set_repository( "haysky-code-receiver" );
